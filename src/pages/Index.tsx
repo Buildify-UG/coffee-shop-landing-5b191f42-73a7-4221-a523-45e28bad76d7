@@ -1,19 +1,43 @@
-import { Coffee, Clock, MapPin, Phone, Mail, Heart, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Coffee, Clock, MapPin, Phone, Mail, Heart, Facebook, Instagram, Twitter, Moon, Sun } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export default function CoffeeShop() {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const isDarkMode = document.documentElement.classList.contains('dark');
+    setIsDark(isDarkMode);
+  }, []);
+
+  const toggleDarkMode = () => {
+    const html = document.documentElement;
+    html.classList.toggle('dark');
+    setIsDark(!isDark);
+  };
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-white dark:from-slate-900 dark:to-slate-950">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-amber-200">
+      <header className="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-amber-200 dark:border-slate-700">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Coffee className="w-8 h-8 text-amber-700" />
-            <h1 className="text-2xl font-bold text-amber-900">Brew Haven</h1>
+            <Coffee className="w-8 h-8 text-amber-700 dark:text-amber-400" />
+            <h1 className="text-2xl font-bold text-amber-900 dark:text-amber-100">Brew Haven</h1>
           </div>
-          <nav className="hidden md:flex gap-8">
-            <a href="#menu" className="text-amber-900 hover:text-amber-700 transition">Menu</a>
-            <a href="#hours" className="text-amber-900 hover:text-amber-700 transition">Hours</a>
-            <a href="#contact" className="text-amber-900 hover:text-amber-700 transition">Contact</a>
+          <nav className="hidden md:flex gap-8 items-center">
+            <a href="#menu" className="text-amber-900 dark:text-amber-100 hover:text-amber-700 dark:hover:text-amber-300 transition">Menu</a>
+            <a href="#hours" className="text-amber-900 dark:text-amber-100 hover:text-amber-700 dark:hover:text-amber-300 transition">Hours</a>
+            <a href="#contact" className="text-amber-900 dark:text-amber-100 hover:text-amber-700 dark:hover:text-amber-300 transition">Contact</a>
+            <button
+              onClick={toggleDarkMode}
+              className="p-2 rounded-lg bg-amber-100 dark:bg-slate-800 hover:bg-amber-200 dark:hover:bg-slate-700 transition"
+              aria-label="Toggle dark mode"
+            >
+              {isDark ? (
+                <Sun className="w-5 h-5 text-amber-600" />
+              ) : (
+                <Moon className="w-5 h-5 text-amber-900" />
+              )}
+            </button>
           </nav>
         </div>
       </header>
