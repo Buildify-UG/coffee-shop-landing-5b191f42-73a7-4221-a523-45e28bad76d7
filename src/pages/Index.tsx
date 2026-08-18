@@ -1,4 +1,4 @@
-import { Coffee, Clock, MapPin, Phone, Mail, Heart } from 'lucide-react';
+import { Coffee, Clock, MapPin, Phone, Mail, Heart, Facebook, Instagram, Twitter } from 'lucide-react';
 
 export default function CoffeeShop() {
   return (
@@ -167,15 +167,31 @@ export default function CoffeeShop() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-amber-900 text-white py-8">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <p className="flex items-center justify-center gap-2 mb-2">
-            <Coffee className="w-4 h-4" />
-            © 2024 Brew Haven. All rights reserved.
-          </p>
-          <p className="text-amber-100 text-sm">
-            Brewing excellence since 2015 • Locally sourced • Ethically traded
-          </p>
+      <footer className="bg-amber-900 text-white py-12">
+        <div className="max-w-6xl mx-auto px-4">
+          {/* Social Links */}
+          <div className="flex items-center justify-center gap-6 mb-8">
+            <a href="https://facebook.com/brewhaven" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition">
+              <Facebook className="w-6 h-6" />
+            </a>
+            <a href="https://instagram.com/brewhaven" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition">
+              <Instagram className="w-6 h-6" />
+            </a>
+            <a href="https://twitter.com/brewhaven" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition">
+              <Twitter className="w-6 h-6" />
+            </a>
+          </div>
+
+          {/* Footer Text */}
+          <div className="text-center border-t border-amber-700 pt-8">
+            <p className="flex items-center justify-center gap-2 mb-2">
+              <Coffee className="w-4 h-4" />
+              © 2024 Brew Haven. All rights reserved.
+            </p>
+            <p className="text-amber-100 text-sm">
+              Brewing excellence since 2015 • Locally sourced • Ethically traded
+            </p>
+          </div>
         </div>
       </footer>
     </div>
