@@ -190,6 +190,45 @@ export default function CoffeeShop() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="max-w-6xl mx-auto px-4 py-16">
+        <h2 className="text-4xl font-bold text-slate-900 dark:text-yellow-300 mb-12 text-center">What Our Customers Say</h2>
+        
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            {
+              name: 'Sarah Johnson',
+              role: 'Regular Customer',
+              text: 'The best espresso in Portland! The baristas really know their craft and always remember my order.',
+              rating: 5
+            },
+            {
+              name: 'Michael Chen',
+              role: 'Business Owner',
+              text: 'Perfect spot for meetings. Great atmosphere, reliable wifi, and consistently excellent coffee.',
+              rating: 5
+            },
+            {
+              name: 'Emma Rodriguez',
+              role: 'Student',
+              text: 'Love studying here! The pastries are fresh, the ambiance is cozy, and the staff is so friendly.',
+              rating: 5
+            }
+          ].map((testimonial, i) => (
+            <div key={i} className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-yellow-300 dark:border-yellow-600 shadow-sm hover:shadow-md transition">
+              <div className="flex gap-1 mb-4">
+                {[...Array(testimonial.rating)].map((_, j) => (
+                  <span key={j} className="text-yellow-400">★</span>
+                ))}
+              </div>
+              <p className="text-slate-700 dark:text-yellow-100 mb-4 italic">"{testimonial.text}"</p>
+              <p className="font-semibold text-slate-900 dark:text-yellow-300">{testimonial.name}</p>
+              <p className="text-sm text-slate-600 dark:text-yellow-200">{testimonial.role}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-slate-900 text-white py-12">
         <div className="max-w-6xl mx-auto px-4">
