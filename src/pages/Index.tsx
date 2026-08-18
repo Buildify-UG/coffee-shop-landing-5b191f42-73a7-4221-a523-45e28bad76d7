@@ -15,27 +15,27 @@ export default function CoffeeShop() {
     setIsDark(!isDark);
   };
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-white dark:from-slate-900 dark:to-slate-950">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 dark:from-slate-950 dark:to-slate-900">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-amber-200 dark:border-slate-700">
+      <header className="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-yellow-400 dark:border-yellow-600">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Coffee className="w-8 h-8 text-amber-700 dark:text-amber-400" />
-            <h1 className="text-2xl font-bold text-amber-900 dark:text-amber-100">Brew Haven</h1>
+            <Coffee className="w-8 h-8 text-yellow-500 dark:text-yellow-400" />
+            <h1 className="text-2xl font-bold text-slate-900 dark:text-yellow-300">Brew Haven</h1>
           </div>
           <nav className="hidden md:flex gap-8 items-center">
-            <a href="#menu" className="text-amber-900 dark:text-amber-100 hover:text-amber-700 dark:hover:text-amber-300 transition">Menu</a>
-            <a href="#hours" className="text-amber-900 dark:text-amber-100 hover:text-amber-700 dark:hover:text-amber-300 transition">Hours</a>
-            <a href="#contact" className="text-amber-900 dark:text-amber-100 hover:text-amber-700 dark:hover:text-amber-300 transition">Contact</a>
+            <a href="#menu" className="text-slate-700 dark:text-yellow-100 hover:text-yellow-600 dark:hover:text-yellow-300 transition">Menu</a>
+            <a href="#hours" className="text-slate-700 dark:text-yellow-100 hover:text-yellow-600 dark:hover:text-yellow-300 transition">Hours</a>
+            <a href="#contact" className="text-slate-700 dark:text-yellow-100 hover:text-yellow-600 dark:hover:text-yellow-300 transition">Contact</a>
             <button
               onClick={toggleDarkMode}
-              className="p-2 rounded-lg bg-amber-100 dark:bg-slate-800 hover:bg-amber-200 dark:hover:bg-slate-700 transition"
+              className="p-2 rounded-lg bg-yellow-100 dark:bg-slate-800 hover:bg-yellow-200 dark:hover:bg-slate-700 transition"
               aria-label="Toggle dark mode"
             >
               {isDark ? (
-                <Sun className="w-5 h-5 text-amber-600" />
+                <Sun className="w-5 h-5 text-yellow-600" />
               ) : (
-                <Moon className="w-5 h-5 text-amber-900" />
+                <Moon className="w-5 h-5 text-slate-900" />
               )}
             </button>
           </nav>
@@ -59,12 +59,12 @@ export default function CoffeeShop() {
 
       {/* Menu Section */}
       <section id="menu" className="max-w-6xl mx-auto px-4 py-16">
-        <h2 className="text-4xl font-bold text-amber-900 mb-12 text-center">Our Menu</h2>
+        <h2 className="text-4xl font-bold text-slate-900 dark:text-yellow-300 mb-12 text-center">Our Menu</h2>
         
         <div className="grid md:grid-cols-2 gap-12">
           {/* Beverages */}
-          <div className="bg-white rounded-lg p-8 border border-amber-100 shadow-sm">
-            <h3 className="text-2xl font-bold text-amber-900 mb-6">Beverages</h3>
+          <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-yellow-300 dark:border-yellow-600 shadow-sm">
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-yellow-300 mb-6">Beverages</h3>
             <div className="space-y-4">
               {[
                 { name: 'Espresso', price: '$3.50' },
@@ -74,17 +74,17 @@ export default function CoffeeShop() {
                 { name: 'Macchiato', price: '$4.50' },
                 { name: 'Cortado', price: '$4.00' },
               ].map((item, i) => (
-                <div key={i} className="flex justify-between items-center pb-2 border-b border-amber-100">
-                  <span className="text-amber-900">{item.name}</span>
-                  <span className="font-semibold text-amber-700">{item.price}</span>
+                <div key={i} className="flex justify-between items-center pb-2 border-b border-yellow-200 dark:border-yellow-700">
+                  <span className="text-slate-700 dark:text-yellow-100">{item.name}</span>
+                  <span className="font-semibold text-yellow-600 dark:text-yellow-400">{item.price}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Pastries & Food */}
-          <div className="bg-white rounded-lg p-8 border border-amber-100 shadow-sm">
-            <h3 className="text-2xl font-bold text-amber-900 mb-6">Pastries & Food</h3>
+          <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-yellow-300 dark:border-yellow-600 shadow-sm">
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-yellow-300 mb-6">Pastries & Food</h3>
             <div className="space-y-4">
               {[
                 { name: 'Croissant', price: '$4.50' },
@@ -94,9 +94,9 @@ export default function CoffeeShop() {
                 { name: 'Breakfast Sandwich', price: '$9.00' },
                 { name: 'Granola Bowl', price: '$7.50' },
               ].map((item, i) => (
-                <div key={i} className="flex justify-between items-center pb-2 border-b border-amber-100">
-                  <span className="text-amber-900">{item.name}</span>
-                  <span className="font-semibold text-amber-700">{item.price}</span>
+                <div key={i} className="flex justify-between items-center pb-2 border-b border-yellow-200 dark:border-yellow-700">
+                  <span className="text-slate-700 dark:text-yellow-100">{item.name}</span>
+                  <span className="font-semibold text-yellow-600 dark:text-yellow-400">{item.price}</span>
                 </div>
               ))}
             </div>
@@ -105,114 +105,114 @@ export default function CoffeeShop() {
       </section>
 
       {/* Hours Section */}
-      <section id="hours" className="bg-amber-900 text-white py-16">
+      <section id="hours" className="bg-slate-900 text-white py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center">Hours of Operation</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center text-yellow-300">Hours of Operation</h2>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-            <div className="bg-amber-800/50 rounded-lg p-6 border border-amber-700">
-              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+            <div className="bg-slate-800 rounded-lg p-6 border border-yellow-500">
+              <h3 className="text-xl font-bold mb-4 flex items-center gap-2 text-yellow-300">
                 <Clock className="w-5 h-5" /> Weekdays
               </h3>
-              <p className="text-amber-100">Monday - Friday</p>
-              <p className="text-2xl font-semibold mt-2">6:00 AM - 8:00 PM</p>
+              <p className="text-yellow-100">Monday - Friday</p>
+              <p className="text-2xl font-semibold mt-2 text-yellow-300">6:00 AM - 8:00 PM</p>
             </div>
 
-            <div className="bg-amber-800/50 rounded-lg p-6 border border-amber-700">
-              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+            <div className="bg-slate-800 rounded-lg p-6 border border-yellow-500">
+              <h3 className="text-xl font-bold mb-4 flex items-center gap-2 text-yellow-300">
                 <Heart className="w-5 h-5" /> Weekends
               </h3>
-              <p className="text-amber-100">Saturday - Sunday</p>
-              <p className="text-2xl font-semibold mt-2">7:00 AM - 9:00 PM</p>
+              <p className="text-yellow-100">Saturday - Sunday</p>
+              <p className="text-2xl font-semibold mt-2 text-yellow-300">7:00 AM - 9:00 PM</p>
             </div>
           </div>
 
-          <p className="text-center text-amber-100 mt-8 text-sm">Closed on major holidays</p>
+          <p className="text-center text-yellow-100 mt-8 text-sm">Closed on major holidays</p>
         </div>
       </section>
 
       {/* Contact Section */}
       <section id="contact" className="max-w-6xl mx-auto px-4 py-16">
-        <h2 className="text-4xl font-bold text-amber-900 mb-12 text-center">Get in Touch</h2>
+        <h2 className="text-4xl font-bold text-slate-900 dark:text-yellow-300 mb-12 text-center">Get in Touch</h2>
         
         <div className="grid md:grid-cols-3 gap-8">
           {/* Location */}
-          <div className="bg-white rounded-lg p-8 border border-amber-100 shadow-sm hover:shadow-md transition">
+          <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-yellow-300 dark:border-yellow-600 shadow-sm hover:shadow-md transition">
             <div className="flex items-center gap-3 mb-4">
-              <MapPin className="w-6 h-6 text-amber-700" />
-              <h3 className="text-xl font-bold text-amber-900">Location</h3>
+              <MapPin className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />
+              <h3 className="text-xl font-bold text-slate-900 dark:text-yellow-300">Location</h3>
             </div>
-            <p className="text-amber-800">
+            <p className="text-slate-700 dark:text-yellow-100">
               123 Coffee Street<br />
               Portland, OR 97214<br />
-              <span className="text-sm text-amber-700">Downtown District</span>
+              <span className="text-sm text-slate-600 dark:text-yellow-200">Downtown District</span>
             </p>
           </div>
 
           {/* Phone */}
-          <div className="bg-white rounded-lg p-8 border border-amber-100 shadow-sm hover:shadow-md transition">
+          <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-yellow-300 dark:border-yellow-600 shadow-sm hover:shadow-md transition">
             <div className="flex items-center gap-3 mb-4">
-              <Phone className="w-6 h-6 text-amber-700" />
-              <h3 className="text-xl font-bold text-amber-900">Phone</h3>
+              <Phone className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />
+              <h3 className="text-xl font-bold text-slate-900 dark:text-yellow-300">Phone</h3>
             </div>
-            <p className="text-amber-800">
-              <a href="tel:+15035551234" className="hover:text-amber-700 transition">
+            <p className="text-slate-700 dark:text-yellow-100">
+              <a href="tel:+15035551234" className="hover:text-yellow-600 dark:hover:text-yellow-300 transition">
                 (503) 555-1234
               </a>
               <br />
-              <span className="text-sm text-amber-700">Call for catering inquiries</span>
+              <span className="text-sm text-slate-600 dark:text-yellow-200">Call for catering inquiries</span>
             </p>
           </div>
 
           {/* Email */}
-          <div className="bg-white rounded-lg p-8 border border-amber-100 shadow-sm hover:shadow-md transition">
+          <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-yellow-300 dark:border-yellow-600 shadow-sm hover:shadow-md transition">
             <div className="flex items-center gap-3 mb-4">
-              <Mail className="w-6 h-6 text-amber-700" />
-              <h3 className="text-xl font-bold text-amber-900">Email</h3>
+              <Mail className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />
+              <h3 className="text-xl font-bold text-slate-900 dark:text-yellow-300">Email</h3>
             </div>
-            <p className="text-amber-800">
-              <a href="mailto:hello@brewhaven.com" className="hover:text-amber-700 transition">
+            <p className="text-slate-700 dark:text-yellow-100">
+              <a href="mailto:hello@brewhaven.com" className="hover:text-yellow-600 dark:hover:text-yellow-300 transition">
                 hello@brewhaven.com
               </a>
               <br />
-              <span className="text-sm text-amber-700">Response within 24 hours</span>
+              <span className="text-sm text-slate-600 dark:text-yellow-200">Response within 24 hours</span>
             </p>
           </div>
         </div>
 
         {/* Map Placeholder */}
-        <div className="mt-12 bg-gradient-to-br from-amber-100 to-amber-50 rounded-lg p-8 border border-amber-200 h-64 flex items-center justify-center">
+        <div className="mt-12 bg-gradient-to-br from-yellow-100 to-yellow-50 dark:from-slate-800 dark:to-slate-700 rounded-lg p-8 border border-yellow-300 dark:border-yellow-600 h-64 flex items-center justify-center">
           <div className="text-center">
-            <MapPin className="w-12 h-12 text-amber-700 mx-auto mb-2" />
-            <p className="text-amber-900 font-semibold">123 Coffee Street, Portland, OR</p>
-            <p className="text-amber-700 text-sm mt-1">Interactive map coming soon</p>
+            <MapPin className="w-12 h-12 text-yellow-600 dark:text-yellow-400 mx-auto mb-2" />
+            <p className="text-slate-900 dark:text-yellow-100 font-semibold">123 Coffee Street, Portland, OR</p>
+            <p className="text-yellow-600 dark:text-yellow-300 text-sm mt-1">Interactive map coming soon</p>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-amber-900 text-white py-12">
+      <footer className="bg-slate-900 text-white py-12">
         <div className="max-w-6xl mx-auto px-4">
           {/* Social Links */}
           <div className="flex items-center justify-center gap-6 mb-8">
-            <a href="https://facebook.com/brewhaven" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition">
+            <a href="https://facebook.com/brewhaven" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition">
               <Facebook className="w-6 h-6" />
             </a>
-            <a href="https://instagram.com/brewhaven" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition">
+            <a href="https://instagram.com/brewhaven" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition">
               <Instagram className="w-6 h-6" />
             </a>
-            <a href="https://twitter.com/brewhaven" target="_blank" rel="noopener noreferrer" className="hover:text-amber-200 transition">
+            <a href="https://twitter.com/brewhaven" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition">
               <Twitter className="w-6 h-6" />
             </a>
           </div>
 
           {/* Footer Text */}
-          <div className="text-center border-t border-amber-700 pt-8">
-            <p className="flex items-center justify-center gap-2 mb-2">
+          <div className="text-center border-t border-yellow-600 pt-8">
+            <p className="flex items-center justify-center gap-2 mb-2 text-yellow-100">
               <Coffee className="w-4 h-4" />
               © 2024 Brew Haven. All rights reserved.
             </p>
-            <p className="text-amber-100 text-sm">
+            <p className="text-yellow-200 text-sm">
               Brewing excellence since 2015 • Locally sourced • Ethically traded
             </p>
           </div>
