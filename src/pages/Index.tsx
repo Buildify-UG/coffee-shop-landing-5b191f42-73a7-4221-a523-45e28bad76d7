@@ -43,7 +43,7 @@ export default function CoffeeShop() {
       </header>
 
       {/* Hero */}
-      <section className="relative h-96 overflow-hidden">
+      <section className="relative h-screen overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1495474472645-4c71bcdd2e18?w=1920&h=800&fit=crop"
           alt="Coffee shop"
@@ -51,8 +51,8 @@ export default function CoffeeShop() {
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <div className="text-center text-white">
-            <h2 className="text-5xl font-bold mb-4">Brew Haven</h2>
-            <p className="text-xl">Artisan Coffee Crafted with Passion</p>
+            <h2 className="text-8xl font-bold mb-6">Brew Haven</h2>
+            <p className="text-2xl">Artisan Coffee Crafted with Passion</p>
           </div>
         </div>
       </section>
